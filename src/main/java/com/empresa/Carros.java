@@ -32,6 +32,17 @@ public class Carros {
         placa="";
     }
 
+    //Mostrar información de los carros
+    @Override
+    public String toString() {
+        String info_carro = "----------------Carro--------------";
+        info_carro += "Placa" + placa;
+        info_carro += "Modelo" + modelo;
+        info_carro += "Velocidad maxima" + vel_maxima;
+        info_carro += "Color" + color;
+        return info_carro;
+    }
+
     //Consultores
     public String getColor(){
         return color;
