@@ -79,43 +79,50 @@ public class Empresa {
     }
 
     //Acciones
-    public void fabricar_carro(String modelo, String placa){
+    public void fabricar_carro(String modelo, String placa, String vel_maxima, String color){
         //Creando carro
-        Carros carro = new Carros(modelo, placa);
+        Carros carro = new Carros(color, null, modelo, placa);
         this.carro[0] = carro;
         System.out.println("Carro creado con exito\n");
     }
     
-    public void fabricar_moto(String modelomoto, String placamoto){
-        Motos moto = new Motos(modelomoto, placamoto);
+    public void fabricar_moto(String modelomoto, String placamoto, String vel_maximamoto, String colormoto){
+        Motos moto = new Motos(colormoto, null, modelomoto, placamoto);
         this.moto[0] = moto;
         System.out.println("Moto creada con exito\n");
     }
 
-    public void Solicitar_datos(){
-        try(Scanner scan = new Scanner(System.in)) {
-            System.out.print("Ingrese el modelo del carro: ");
-            String modelo = scan.nextLine();
-            System.out.print("Ingrese la placa del carro: ");
-            String placa = scan.nextLine();
-            fabricar_carro(modelo, placa);
+    public void Solicitar_datos(Scanner scan){
+        System.out.print("Ingrese el modelo del carro: ");
+        String modelo = scan.nextLine();
 
-        } catch (Exception e) {
-            System.out.print("Ingrese datos validos para carros");
-        }
+        System.out.print("Ingrese la placa del carro: ");
+        String placa = scan.nextLine();
+
+        System.out.print("Ingrese la velocidad maxima del carro: ");
+        String vel_maxima = scan.nextLine();
+
+        System.out.print("Ingrese el color del carro: ");
+        String color = scan.nextLine();
+
+        fabricar_carro(modelo, placa,vel_maxima,color);
     }
 
-    public void Solicitar_datos_moto(){
-        try(Scanner scan = new Scanner(System.in)) {
-            System.out.print("Ingrese el modelo de la moto: ");
-            String modelomoto = scan.nextLine();
-            System.out.print("Ingrese la placa de la moto: ");
-            String placamoto = scan.nextLine();
-            fabricar_moto(modelomoto, placamoto);
+    public void Solicitar_datos_moto(Scanner scan){
+        System.out.print("Ingrese el modelo de la moto: ");
+        String modelomoto = scan.nextLine();
 
-        } catch (Exception e) {
-            System.out.print("Ingrese datos validos para carros");
-        }
+        System.out.print("Ingrese la placa de la moto: ");
+        String placamoto = scan.nextLine();
+
+        System.out.print("Ingrese la velocidad maxima de la moto: ");
+        String vel_maximamoto = scan.nextLine();
+
+        System.out.print("Ingrese el color de la moto: ");
+        String colormoto = scan.nextLine();
+
+
+        fabricar_moto(modelomoto, placamoto, vel_maximamoto, colormoto);
     }
 
     public void Mostrar_carro(){
@@ -151,8 +158,7 @@ public class Empresa {
     }
 
     public void Menu(){
-
-        String menu = "----------------Bienvenido a la empresa " +nombre+"----------------\n";
+        String menu = "\n----------------Bienvenido a la empresa " +nombre+"----------------\n";
         menu += "1) Fabricar carro \n";
         menu += "2) Fabricar moto \n";
         menu += "3) Mostrar todos los carros \n";
@@ -174,10 +180,10 @@ public class Empresa {
 
                 switch (opcion){
                     case 1:
-                        Solicitar_datos();
+                        Solicitar_datos(scan);
                         break;
                     case 2:
-                        Solicitar_datos_moto();
+                        Solicitar_datos_moto(scan);
                         break;
                     case 3:
                         Mostrar_carro();
