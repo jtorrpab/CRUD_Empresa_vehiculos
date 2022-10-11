@@ -78,6 +78,4 @@ public class Motos {
     public void Girar_izq(){
         System.out.println("Girando a la derecha...");
     }
-
-
 }
