@@ -32,6 +32,17 @@ public class Motos {
         placa="";
     }
 
+    //Mostrar motos
+    @Override
+    public String toString() {
+        String info_moto = "----------------Moto--------------";
+        info_moto += "Placa" + placa;
+        info_moto += "Modelo" + modelo;
+        info_moto += "Velocidad maxima" + vel_maxima;
+        info_moto += "Color" + color;
+        return info_moto;
+    }
+
     //Consultores
     public String getColor(){
         return color;
