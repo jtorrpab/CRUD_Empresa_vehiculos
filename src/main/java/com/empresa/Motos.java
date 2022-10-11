@@ -64,19 +64,19 @@ public class Motos {
 
     //Acciones 
     public void Acelerar(){
-
+        System.out.println("Acelerando...");
     }
 
     public void Frenar(){
-
+        System.out.println("Frenando...");
     }
 
     public void Girar_dere(){
-
+        System.out.println("Girando a la izquierda...");
     }
 
     public void Girar_izq(){
-
+        System.out.println("Girando a la derecha...");
     }
 
 
