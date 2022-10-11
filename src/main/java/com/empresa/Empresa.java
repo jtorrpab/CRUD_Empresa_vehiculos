@@ -83,45 +83,38 @@ public class Empresa {
         //Creando carro
         Carros carro = new Carros(color, null, modelo, placa);
         this.carro[0] = carro;
-        System.out.println("Carro creado con exito\n");
+        System.out.println("\nCarro creado con exito\n");
     }
     
     public void fabricar_moto(String modelomoto, String placamoto, String vel_maximamoto, String colormoto){
         Motos moto = new Motos(colormoto, null, modelomoto, placamoto);
         this.moto[0] = moto;
-        System.out.println("Moto creada con exito\n");
+        System.out.println("\nMoto creada con exito\n");
     }
 
     public void Solicitar_datos(Scanner scan){
+        System.out.print("Diligencia el siguiente formulario para crear un carro\n");
         System.out.print("Ingrese el modelo del carro: ");
-        String modelo = scan.nextLine();
-
+        String modelo = scan.next();
         System.out.print("Ingrese la placa del carro: ");
-        String placa = scan.nextLine();
-
-        System.out.print("Ingrese la velocidad maxima del carro: ");
-        String vel_maxima = scan.nextLine();
-
+        String placa = scan.next();
+        System.out.print("Ingrese la velocidad maxima del carro: (K/h) ");
+        String vel_maxima = scan.next();
         System.out.print("Ingrese el color del carro: ");
-        String color = scan.nextLine();
-
+        String color = scan.next();
         fabricar_carro(modelo, placa,vel_maxima,color);
     }
 
     public void Solicitar_datos_moto(Scanner scan){
+        System.out.print("Diligencia el siguiente formulario para crear una moto\n");
         System.out.print("Ingrese el modelo de la moto: ");
-        String modelomoto = scan.nextLine();
-
+        String modelomoto = scan.next();
         System.out.print("Ingrese la placa de la moto: ");
-        String placamoto = scan.nextLine();
-
-        System.out.print("Ingrese la velocidad maxima de la moto: ");
-        String vel_maximamoto = scan.nextLine();
-
+        String placamoto = scan.next();
+        System.out.print("Ingrese la velocidad maxima de la moto: (K/h) ");
+        String vel_maximamoto = scan.next();
         System.out.print("Ingrese el color de la moto: ");
-        String colormoto = scan.nextLine();
-
-
+        String colormoto = scan.next();
         fabricar_moto(modelomoto, placamoto, vel_maximamoto, colormoto);
     }
 
