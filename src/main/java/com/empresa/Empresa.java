@@ -1,5 +1,7 @@
 package com.empresa;
 
+import java.util.Scanner;
+
 public class Empresa {
 
     //Atributos
@@ -7,6 +9,8 @@ public class Empresa {
     private String nit;
     private String direccion;
     private String telefono;
+    private Carros[] carro;
+    private Motos[] moto;
 
     //Constructores
     public Empresa (String nombre, String nit, String direccion, String telefono){
@@ -14,6 +18,8 @@ public class Empresa {
         this.nit = nit;
         this.direccion = direccion;
         this.telefono = telefono;
+        carro = new Carros[50];
+        moto = new Motos[50];
     }
 
     public Empresa(){
@@ -25,6 +31,8 @@ public class Empresa {
         nit="";
         direccion="";
         telefono="";
+        carro = new Carros[0];
+        moto = new Motos[0];
     }
 
     //Consultores
@@ -63,20 +71,35 @@ public class Empresa {
     }
 
     //Acciones
-    public void fabricar_carro(){
-
+    public void fabricar_carro(String modelo, String placa){
+        //Creando carro
+        Carros carro = new Carros(modelo, placa);
+        this.carro[0] = carro;
+        System.out.println("Carro creado con exito\n");
     }
     
-    public void fabricar_moto(){
-        
+    public void fabricar_moto(String modelomoto, String placamoto){
+        Motos moto = new Motos(modelomoto, placamoto);
+        this.moto[0] = moto;
+        System.out.println("Moto creada con exito\n");
     }
 
-    public void Solicitar_datos_carro(){
+    public void Solicitar_datos(){
+        try(Scanner scan = new Scanner(System.in)) {
+            System.out.print("Ingrese el modelo del carro: ");
+            String modelo = scan.nextLine();
+            System.out.print("Ingrese la placa del carro: ");
+            String placa = scan.nextLine();
+            fabricar_carro(modelo, placa);
 
+            System.out.print("Ingrese el modelo de la moto: ");
+            String modelomoto = scan.nextLine();
+            System.out.print("Ingrese la placa de la moto: ");
+            String placamoto = scan.nextLine();
+            fabricar_moto(modelomoto, placamoto);
+
+        } catch (Exception e) {
+            System.out.print("Ingrese datos validos para carros");
+        }
     }
-
-    public void Solicitar_datos_moto(){
-
-    }
-    
 }
