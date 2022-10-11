@@ -51,6 +51,10 @@ public class Empresa {
     public String getDireccion(){
         return direccion;
     }
+
+    public Carros getCarro(int pos){
+        return carro[pos];
+    }
     
     //Modificadores
 
@@ -68,6 +72,10 @@ public class Empresa {
 
     public void setTelefono(String telefono){
         this.telefono = telefono;
+    }
+
+    public void setCarro (int pos, Carros carro){
+        this.carro[pos] = carro;
     }
 
     //Acciones
