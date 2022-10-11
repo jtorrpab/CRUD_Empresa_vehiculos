@@ -64,19 +64,19 @@ public class Carros {
 
     //Acciones 
     public void Acelerar_Carros(){
-
+        System.out.println("Acelerando...");
     }
 
     public void Frenar_Carros(){
-
+        System.out.println("Frenando...");
     }
 
     public void Girar_dere_Carros(){
-
+        System.out.println("Girando a la derecha...");
     }
 
     public void Girar_izq_Carros(){
-
+        System.out.println("Girando a la izquierda...");
     }
 
 
