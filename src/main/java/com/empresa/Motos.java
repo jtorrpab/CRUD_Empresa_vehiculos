@@ -3,22 +3,22 @@ package com.empresa;
 public class Motos {
     
     //Atributos
-    private String color;
-    private Double vel_maxima;
-    private String modelo;
-    private String placa;
+    private String colormoto;
+    private Double vel_maximamoto;
+    private String modelomoto;
+    private String placamoto;
 
     //Constructores
-    public Motos(String color, Double vel_maxima, String modelo, String placa){
-        this.color = color;
-        this.vel_maxima = vel_maxima;
-        this.modelo = modelo;
-        this.placa = placa;
+    public Motos(String colormoto, Double vel_maximamoto, String modelomoto, String placamoto){
+        this.colormoto = colormoto;
+        this.vel_maximamoto = vel_maximamoto;
+        this.modelomoto = modelomoto;
+        this.placamoto = placamoto;
     }
 
-    public Motos(String modelo, String placa){
-        this.modelo = modelo;
-        this.placa = placa;
+    public Motos(String modelomoto, String placamoto){
+        this.modelomoto = modelomoto;
+        this.placamoto = placamoto;
     }
 
     public Motos(){
@@ -26,51 +26,52 @@ public class Motos {
     }
 
     public void Inicializar(){
-        color="";
-        vel_maxima= 0.0;
-        modelo="";
-        placa="";
+        colormoto="";
+        vel_maximamoto= 0.0;
+        modelomoto="";
+        placamoto="";
     }
 
     //Mostrar motos
     @Override
     public String toString() {
-        String info_moto = "----------------Moto--------------";
-        info_moto += "Placa" + placa;
-        info_moto += "Modelo" + modelo;
-        info_moto += "Velocidad maxima" + vel_maxima;
-        info_moto += "Color" + color;
+        String info_moto = "----------------Moto--------------\n";
+        info_moto += "Placa" + placamoto;
+        info_moto += "\nModelo" + modelomoto;
+        info_moto += "\nVelocidad maxima" + vel_maximamoto;
+        info_moto += "\nColor" + colormoto;
+        info_moto += "\n------------------------------\n";
         return info_moto;
     }
 
     //Consultores
     public String getColor(){
-        return color;
+        return colormoto;
     }
 
     public Double getVel_Maxima(){
-        return vel_maxima;
+        return vel_maximamoto;
     }
 
     public String getModelo(){
-        return modelo;
+        return modelomoto;
     }
 
     public String getPlaca(){
-        return placa;
+        return placamoto;
     }
 
     //Modificadores
-    public void setColor(String color){
-        this.color = color;
+    public void setColor(String colormoto){
+        this.colormoto = colormoto;
     }
 
-    public void setVel_Maxima(Double vel_maxima){
-        this.vel_maxima = vel_maxima;
+    public void setVel_Maxima(Double vel_maximamoto){
+        this.vel_maximamoto = vel_maximamoto;
     }
 
-    public void setPlaca(String placa){
-        this.placa = placa;
+    public void setPlaca(String placamoto){
+        this.placamoto = placamoto;
     }
 
     //Acciones 

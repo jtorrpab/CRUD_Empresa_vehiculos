@@ -35,11 +35,12 @@ public class Carros {
     //Mostrar información de los carros
     @Override
     public String toString() {
-        String info_carro = "----------------Carro--------------";
-        info_carro += "Placa" + placa;
-        info_carro += "Modelo" + modelo;
-        info_carro += "Velocidad maxima" + vel_maxima;
-        info_carro += "Color" + color;
+        String info_carro = "----------------Carro--------------\n";
+        info_carro += "Placa: " + placa;
+        info_carro += "\nModelo: " + modelo;
+        info_carro += "\nVelocidad maxima: " + vel_maxima;
+        info_carro += "\nColor: " + color;
+        info_carro += "\n------------------------------\n";
         return info_carro;
     }
 
