@@ -133,20 +133,20 @@ public class Empresa {
     }
 
     public void Mostrar_carro(){
-        for(int i = 0; i <= carro.length;i++){
+        for(int i = 0; i < carro.length;i++){
             if(carro[i] != null){
                 System.out.println(carro[i]);
             }
-        }
-
+        }      
     }
 
     public void Mostrar_moto(){
-        for(int i= 0; i<=this.moto.length;i++){
+        for(int i= 0; i<this.moto.length;i++){
             if(moto[i] != null){
                 System.out.println(moto[i]);
             }
         }
+    Menu();
     }
 
     public void Mostrar_carro_placa(Scanner scan){
